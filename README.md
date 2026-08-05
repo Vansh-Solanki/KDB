@@ -6,7 +6,7 @@ Notes and exercises while learning kdb+/q.
 
 - [chapter00/](chapter00/) — Overview and hello world
 - [chapter01/](chapter01/) — Shock and Awe: variables, types, lists, functions, iterators, tables, q-sql
-- chapter02/ — Basic Data Types - Atoms (coming soon)
+- [chapter02/](chapter02/) — Basic Data Types - Atoms
 - chapter03/ — Lists (coming soon)
 - chapter04/ — Operators (coming soon)
 - chapter05/ — Dictionaries (coming soon)
