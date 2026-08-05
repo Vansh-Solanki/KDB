@@ -70,3 +70,66 @@ discount[1000;0.05;2]
 
 mid:{(x+y)%2} //bid + ask /2
 mid[100.0; 100.5]
+
+
+(+/) 1 2 3 4 5 //over accumulated at the end
+0 +/ 1 2 3 4 5
+(+\) 1 2 3 4 5 //Scan Running sum
+
+42+100 200 300
+(*/) 1 2 3 4 5
+(*\) 1 2 3 4 5
+
+dailypnl:100 -50 200 -30 80
+sums dailypnl
+max sums dailypnl
+min sums dailypnl
+
+prices: 100 105 98 110 95 120
+maxs prices
+prices-maxs prices
+min prices-maxs prices
+
+(+/) enlist 5     / 5, fine
+(+\) enlist 5     / ,5 (enlisted), be careful
+
+
+d:`a`b`c ! 10 20 30 //dict in q
+`col1`col2!(1 2 3; 10.0 20.0 30.0)
+
+t:([] col1:1 2 3; col2:10.0 20.0 30.0)
+t[`col1]    / 1 2 3   (get column)
+t[0]        / record dictionary at row 0
+t[0;`col1]  / 1 (specific cell)
+
+t:([]c1:1 2 3;c2:10.0 20.0 30.0)
+
+f:([]c1:1000+til 6;c2:`a`b`c`a`b`a; c3:10*1+til 6)
+/ select all
+select from t
+
+/ select specific columns
+select c1, c3 from t
+
+/ computed column
+select c1, val:2*c3 from t
+
+/ filter
+select from t where c2=`a
+
+/ group by
+select count c1, sum c3 by c2 from t
+
+/ group by computed column
+select count c2 by ovrund:c3<=40 from t
+
+select vwap:vol wavg px by sym from trades //vwap query
+select vwap:vol wavg px by sym, bkt:100000000 xbar tm from trades //bucketed vwap query
+/ 100000000 nanoseconds = 100 milliseconds bucket
+/ xbar buckets the time into 100ms intervals
+
+
+`:/tmp/mytable set t          / save to disk
+get `:/tmp/mytable            / load back
+`:/tmp/mytable.csv 0: csv 0: t    / write CSV
+
