@@ -10,7 +10,7 @@ Notes and exercises while learning kdb+/q.
 - [chapter03/](chapter03/) — Lists
 - [chapter04/](chapter04/) — Operators
 - [chapter05/](chapter05/) — Dictionaries
-- chapter06/ — Functions (coming soon)
+- [chapter06/](chapter06/) — Functions
 - chapter07/ — Transforming Data (coming soon)
 - chapter08/ — Tables (coming soon)
 - chapter09/ — q-sql Queries (coming soon)
