@@ -11,7 +11,7 @@ Notes and exercises while learning kdb+/q.
 - [chapter04/](chapter04/) — Operators
 - [chapter05/](chapter05/) — Dictionaries
 - [chapter06/](chapter06/) — Functions
-- chapter07/ — Transforming Data (coming soon)
+- [chapter07/](chapter07/) — Transforming Data
 - chapter08/ — Tables (coming soon)
 - chapter09/ — q-sql Queries (coming soon)
 - project/ — Trading Analytics Project (coming soon)
